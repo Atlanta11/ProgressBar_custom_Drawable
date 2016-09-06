@@ -1,0 +1,73 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity"
+    android:background="#e5e8e2"
+    >
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#676a6b"
+        />
+    <!-- Default color/drawable progress bar -->
+    <ProgressBar
+        android:id="@+id/pb_default"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_below="@id/tv"
+        android:layout_marginBottom="15dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progress bar default drawable"
+        android:layout_toRightOf="@id/pb_default"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="10dp"
+        android:layout_alignBottom="@id/pb_default"
+        android:paddingLeft="10dp"
+        />
+    <!--
+        android:progressDrawable
+            Drawable used for the progress mode.
+
+            Must be a reference to another resource, in the form "@[+][package:]type:name"
+            or to a theme attribute in the form "?[package:][type:]name".
+
+            This corresponds to the global attribute resource symbol progressDrawable.
+    -->
+    <!-- Progress bar custom drawable by XML -->
+    <ProgressBar
+        android:id="@+id/pb_drawable"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        android:layout_below="@id/pb_default"
+        android:progressDrawable="@drawable/progressbar_states"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Progress bar custom drawable"
+        android:layout_toRightOf="@id/pb_drawable"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="10dp"
+        android:layout_alignBottom="@id/pb_drawable"
+        android:paddingLeft="10dp"
+        />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Operation"
+        android:layout_below="@id/pb_drawable"
+        android:layout_marginTop="25dp"
+        />
+</RelativeLayout>
